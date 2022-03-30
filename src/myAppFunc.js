@@ -1,10 +1,6 @@
-import './ShowData.css';
-import axios from 'axios';
+import API from "./API"
 import {useEffect, useState} from "react";
-
-const API = axios.create({
-  baseURL: "https://api.data.gov.sg/v1/environment",
-});
+import ShowData from "./ShowData"
 
 
 function MyApp() {
@@ -44,18 +40,8 @@ function MyApp() {
   }
 
   return (
-    <div className="App">
-     <u>Assignment 2.12: React and axios.</u>
-     <br/><br/>
-     <u>24 hours weather forecast</u>
-     <br/>
-      Time of forecast: {((neaData.timeStamp).slice(0,-9)).substr(-5)}
-     <br/> 
-     Forecast: {neaData.forecast}
-     <br/>
-     Temperature (Low/High): {neaData.temperature.low}C/{neaData.temperature.high}C
-     <br/>
-     Humidity(Low/High): {neaData.relative_humidity.low}/{neaData.relative_humidity.high}
+    <div>
+      <ShowData neaData={neaData}/>
     </div>
   );
 }
