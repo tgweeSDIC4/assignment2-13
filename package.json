@@ -16,11 +16,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "REACT_APP_ENV=dev react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:stage":"REACT_APP_ENV=stage react-scripts build",
-    "predeploy": "npm run build:stage",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
