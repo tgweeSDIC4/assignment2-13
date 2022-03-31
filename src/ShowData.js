@@ -1,4 +1,6 @@
+import config from "./config";
 import "./ShowData.css";
+
 
 function ShowData({neaData}){
 
@@ -13,7 +15,11 @@ function ShowData({neaData}){
      Temperature (Low/High): {neaData.temperature.low}C / {neaData.temperature.high}C
      <br/>
      Humidity(Low/High): {neaData.relative_humidity.low} / {neaData.relative_humidity.high}
+     <br/><br/>
+     <div>BaseURL:{config.baseURL}</div>
     </div>
+
+   
   );
 }
 
